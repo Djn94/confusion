@@ -3,24 +3,19 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require('mongoose');
-
-// Define middleware here
+const routes = require('./routes/api/index')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+app.use(routes)
 
-// Define API routes here
-
-// Send every other request to the React app
-// Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1/test",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1/jewelryshop",
   {
     useCreateIndex: true,
     useNewUrlParser: true
