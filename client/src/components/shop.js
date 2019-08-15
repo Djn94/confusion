@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardActions, CardText, Button, CardMenu, IconButton } from 'react-mdl';
+import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardActions, CardText, Button } from 'react-mdl';
 
 class Shop extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Shop extends Component {
                 <div className="productcard-grid">
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{
-                            color: '#fff', height: '176',
+                            color: '#fff', height: '240',
                             background: "url(https://i.etsystatic.com/isbl/d488ef/35812320/isbl_1680x420.35812320_qzupim8o.jpg?version=0) center/cover "
                         }} > Necklace Name</CardTitle>
                         <CardText>
@@ -81,6 +81,8 @@ class Shop extends Component {
                             This fine bracelet is also dope please click this to creep
                 </CardText>
                         <CardActions>
+                            <Button>View Item</Button>
+
                             <Button>Add to Cart</Button>
                         </CardActions>
                     </Card>
@@ -93,6 +95,8 @@ class Shop extends Component {
                             This fine bracelet is SUPER dope please click this to creep
                 </CardText>
                         <CardActions>
+                            <Button>View Item</Button>
+
                             <Button>Add to Cart</Button>
                         </CardActions>
                     </Card>
@@ -111,6 +115,8 @@ class Shop extends Component {
                             This fine Earring is dope please click this to creep
                 </CardText>
                         <CardActions>
+                            <Button>View Item</Button>
+
                             <Button>Add to Cart</Button>
                         </CardActions>
                     </Card>
@@ -123,6 +129,8 @@ class Shop extends Component {
                             This fine Earring is also dope please click this to creep
                 </CardText>
                         <CardActions>
+                            <Button>View Item</Button>
+
                             <Button>Add to Cart</Button>
                         </CardActions>
                     </Card>

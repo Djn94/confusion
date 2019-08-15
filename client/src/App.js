@@ -3,12 +3,13 @@ import "./App.css";
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
+import Footer from './components/footer'
 class App extends Component {
   render() {
     return (
       <div className="demo-big-content">
         <Layout>
-          <Header title="Chloe By Design" scroll>
+          <Header title="Chloe By Design" className="header-color" scroll>
             <Navigation>
               <Link to="/shop">Shop</Link>
               <Link to="/events">Events</Link>
@@ -26,6 +27,7 @@ class App extends Component {
             <div className="page-content" />
             <Main />
           </Content>
+          <Footer></Footer>
         </Layout>
       </div>);
   }
