@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+import Main from './components/main';
+import { Link } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
@@ -8,9 +10,9 @@ class App extends Component {
         <Layout>
           <Header title="Chloe By Design" scroll>
             <Navigation>
-              <a href="/">Shop</a>
-              <a href="/">Events</a>
-              <a href="/">Cart</a>
+              <Link to="/shop">Shop</Link>
+              <Link to="/events">Events</Link>
+              <Link to="/cart">Cart</Link>
             </Navigation>
           </Header>
           <Drawer title="Chloe By Design">
@@ -22,6 +24,7 @@ class App extends Component {
           </Drawer>
           <Content>
             <div className="page-content" />
+            <Main />
           </Content>
         </Layout>
       </div>);
