@@ -3,7 +3,9 @@ import "./App.css";
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import Main from './components/main';
 import { Link } from 'react-router-dom';
-import Footer from './components/footer'
+import Footer from './components/footer';
+import StripeCheckout from 'react-stripe-checkout';
+import Facebook from './components/Facebook'
 class App extends Component {
   render() {
     return (

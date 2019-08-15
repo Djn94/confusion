@@ -5,7 +5,7 @@ import { Footer, FooterSection, FooterLinkList } from 'react-mdl';
 class Cart extends Component {
     render() {
         return (
-            <div class="footer-div"><Footer size="mini">
+            <div className="footer-div"><Footer size="mini">
                 <FooterSection type="left" logo="Title">
                     <FooterLinkList>
                         <a href="/">Help</a>

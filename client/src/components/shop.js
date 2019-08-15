@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardActions, CardText, Button } from 'react-mdl';
-
+import StripeCheckout from 'react-stripe-checkout';
 class Shop extends Component {
     constructor(props) {
         super(props);
@@ -8,6 +8,7 @@ class Shop extends Component {
         this.state = { activeTab: 0 };
 
     }
+
     toggleCategories() {
         if (this.state.activeTab === 0) {
             return (
@@ -21,9 +22,9 @@ class Shop extends Component {
                             This fine necklace is dope please click this to creep
                     </CardText>
                         <CardActions>
-                            <Button>View Item</Button>
 
-                            <Button>Add to Cart</Button>
+                            <Button>View Item</Button>
+                            <StripeCheckout></StripeCheckout>
                         </CardActions>
                     </Card>
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
@@ -37,7 +38,7 @@ class Shop extends Component {
                         <CardActions>
                             <Button>View Item</Button>
 
-                            <Button>Add to Cart</Button>
+                            <StripeCheckout></StripeCheckout>
                         </CardActions>
                     </Card>
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
@@ -51,7 +52,7 @@ class Shop extends Component {
                         <CardActions>
                             <Button>View Item</Button>
 
-                            <Button>Add to Cart</Button>
+                            <StripeCheckout></StripeCheckout>
                         </CardActions>
                     </Card>
                 </div>
@@ -69,8 +70,9 @@ class Shop extends Component {
                             This fine Bracelet is dope please click this to creep
                 </CardText>
                         <CardActions>
-                            <Button>Add to Cart</Button>
-                        </CardActions>
+                            <Button>View Item</Button>
+
+                            <StripeCheckout></StripeCheckout>                        </CardActions>
                     </Card>
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{
@@ -83,8 +85,7 @@ class Shop extends Component {
                         <CardActions>
                             <Button>View Item</Button>
 
-                            <Button>Add to Cart</Button>
-                        </CardActions>
+                            <StripeCheckout></StripeCheckout>                        </CardActions>
                     </Card>
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{
@@ -97,8 +98,7 @@ class Shop extends Component {
                         <CardActions>
                             <Button>View Item</Button>
 
-                            <Button>Add to Cart</Button>
-                        </CardActions>
+                            <StripeCheckout></StripeCheckout>                        </CardActions>
                     </Card>
                 </div>
             )
@@ -117,8 +117,7 @@ class Shop extends Component {
                         <CardActions>
                             <Button>View Item</Button>
 
-                            <Button>Add to Cart</Button>
-                        </CardActions>
+                            <StripeCheckout></StripeCheckout>                        </CardActions>
                     </Card>
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{
@@ -131,8 +130,7 @@ class Shop extends Component {
                         <CardActions>
                             <Button>View Item</Button>
 
-                            <Button>Add to Cart</Button>
-                        </CardActions>
+                            <StripeCheckout></StripeCheckout>                        </CardActions>
                     </Card>
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{
@@ -144,8 +142,7 @@ class Shop extends Component {
                 </CardText>
                         <CardActions>
                             <Button>View Item</Button>
-                            <Button>Add to Cart</Button>
-                        </CardActions>
+                            <StripeCheckout></StripeCheckout>                        </CardActions>
                     </Card>
                 </div>
             )
