@@ -24,7 +24,8 @@ class Shop extends Component {
                         <CardActions>
 
                             <Button>View Item</Button>
-                            <StripeCheckout></StripeCheckout>
+                            <StripeCheckout stripeKey="pk_live_oFG0uNpicewJYD1uyjwXwNKT00pGIinJTB
+"></StripeCheckout>
                         </CardActions>
                     </Card>
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>

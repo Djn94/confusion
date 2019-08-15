@@ -10,13 +10,21 @@ export default class Facebook extends Component {
         picture: ""
     }
     responseFacebook = response => {
-        console.log(response);
+        this.setState({
+            isLoggedIn: true,
+            userId: response.userId,
+            name: response.name,
+            email: response.email,
+            picture: response.picture.data.url
+        })
     }
     componentClicked = () => console.log("clicked");
     render() {
         let fbContent;
         if (this.state.isLoggedIn) {
-            fbContent = null;
+            fbContent = (<div style={{ width: '200px', height: "100px", margin: 'auto', background: '#f4f4f4', padding: '20px' }}>
+                <img src={this.state.picture} alt={this.state.name} />
+            </div>);
         }
         else {
             fbContent = (<FacebookLogin
