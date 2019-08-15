@@ -50,7 +50,7 @@ class Event extends Component {
                 <Card shadow={0} className="event-card" style={{ width: '256px', height: '256px', background: '#3E4EB8' }}>
                     <CardTitle expand style={{ alignItems: 'flex-start', color: '#fff' }}>
                         <h4 style={{ marginTop: '0' }}>
-                            UHCL Crafts Show<br />
+                            UHCL Crafts Show:<br />
                             December 13, 2019<br />
                             8am-8pm
         </h4>
