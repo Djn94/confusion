@@ -1,20 +1,30 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to hello</h2>
-        </div>
-        <p className="App-intro">
-          Necklaces<code>Bracelets</code> Earrings.
-        </p>
-      </div>
-    );
+      <div className="demo-big-content">
+        <Layout>
+          <Header title="Chloe By Design" scroll>
+            <Navigation>
+              <a href="/">Shop</a>
+              <a href="/">Events</a>
+              <a href="/">Cart</a>
+            </Navigation>
+          </Header>
+          <Drawer title="Chloe By Design">
+            <Navigation>
+              <a href="/">Shop</a>
+              <a href="/">Events</a>
+              <a href="/">Cart</a>
+            </Navigation>
+          </Drawer>
+          <Content>
+            <div className="page-content" />
+          </Content>
+        </Layout>
+      </div>);
   }
 }
 
