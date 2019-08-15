@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Tabs, Tab } from 'react-mdl';
+import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardActions, CardText, Button, CardMenu, IconButton } from 'react-mdl';
 
 class Shop extends Component {
     constructor(props) {
@@ -11,9 +11,18 @@ class Shop extends Component {
     toggleCategories() {
         if (this.state.activeTab === 0) {
             return (
-                <div>
-                    <h1>These are necklaces</h1>
-                </div>
+                <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+                    <CardTitle style={{
+                        color: '#fff', height: '176',
+                        background: "url(https://i.etsystatic.com/isbl/d488ef/35812320/isbl_1680x420.35812320_qzupim8o.jpg?version=0) center/cover "
+                    }} > Necklace Name</CardTitle>
+                    <CardText>
+                        This fine necklace is dope please click this to creep
+                    </CardText>
+                    <CardActions>
+                        <Button>Add to Cart</Button>
+                    </CardActions>
+                </Card>
             )
         }
         else if (this.state.activeTab === 1) {
@@ -40,7 +49,12 @@ class Shop extends Component {
                     <Tab>Earrings</Tab>
                 </Tabs>
                 <section>
-                    {this.toggleCategories()}
+                    <Grid className="productcard-grid">
+                        <Cell col={12}>
+                            <div className="content">{this.toggleCategories()}
+                            </div>
+                        </Cell>
+                    </Grid>
                 </section>
             </div>
         )
