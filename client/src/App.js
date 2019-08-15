@@ -17,9 +17,9 @@ class App extends Component {
           </Header>
           <Drawer title="Chloe By Design">
             <Navigation>
-              <a href="/">Shop</a>
-              <a href="/">Events</a>
-              <a href="/">Cart</a>
+              <Link to="/shop">Shop</Link>
+              <Link to="/events">Events</Link>
+              <Link to="/cart">Cart</Link>
             </Navigation>
           </Drawer>
           <Content>
